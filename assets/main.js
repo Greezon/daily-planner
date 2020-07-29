@@ -4,4 +4,10 @@ $(".saveBtn").on("click", function(){
     console.log(userData,timeBlock)
     localStorage.setItem(timeBlock, userData)
 })
+    for (let i = 8; i <= 16; i++) {
+        const element = localStorage.getItem(i);
+        $(`#${i}-input`).val(element)
+    }
+var todaysDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+$("#todaysDate").append(todaysDate)
 
